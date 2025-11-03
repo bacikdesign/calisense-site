@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Calisense – Mobil & Dijital Sensör Kalibrasyonu</title>
+  <meta name="description" content="Mobil ve dijital sensör kalibrasyonu: basınç, sıcaklık, tork, elektriksel. ISO/IEC 17025 uyumlu süreç, QR’lı dijital sertifika ve Sensor Health™."/>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    html, body { scroll-behavior: smooth; }
+    .badge { border-radius: 9999px; border:1px solid #e5e7eb; padding: 4px 10px; font-size:12px; display:inline-flex; gap:8px; align-items:center;}
+    .chip { border-radius: 9999px; border:1px solid #e5e7eb; padding: 6px 10px; font-size:12px; display:inline-flex; gap:6px; align-items:center;}
+    .card { border:1px solid #e5e7eb; border-radius:16px; background:#fff; }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+  <!-- Top Bar -->
+  <header class="sticky top-0 z-40 w-full border-b bg-white/80 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:py-4">
+      <a href="#home" class="flex items-center gap-2 font-semibold">
+        <i data-lucide="gauge" class="w-6 h-6"></i><span>Calisense</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-gray-600">
+        <a href="#services" class="hover:text-black">Hizmetler</a>
+        <a href="#sensors"  class="hover:text-black">Sensör Aralıkları</a>
+        <a href="#dashboard" class="hover:text-black">Dashboard</a>
+        <a href="#partners" class="hover:text-black">Partnerler</a>
+        <a href="#pricing"  class="hover:text-black">Paketler</a>
+        <a href="#contact"  class="hover:text-black">İletişim</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-teal-50"></div>
+    <div class="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-4 py-16 md:grid-cols-2 md:py-24">
+      <div>
+        <div class="badge"><i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Mobil + Dijital Kalibrasyon</div>
+        <h1 class="mt-4 text-3xl font-bold leading-tight md:text-5xl">
+          Sensör Kalibrasyonunda <span class="text-blue-600">Hız</span>,<br class="hidden md:block"> Güvenirlik ve <span class="text-teal-600">Dijital Sertifika</span>
+        </h1>
+        <p class="mt-4 text-gray-600 md:text-lg">
+          Kocaeli merkezli mobil ekip, İstanbul ve Bursa’ya aynı gün servis. ISO/IEC 17025 uyumlu süreç, QR’lı dijital sertifika ve Sensor Health™ skoru ile kalibrasyona yeni standart.
+          <br><span class="text-gray-700">Amacımız: Türkiye’deki <strong>tüm kalibrasyon ofislerini tek bir hizmet çatısı altında</strong> birleştirip, müşteriye hız ve şeffaflık sağlayan bir platform sunmak.</span>
+        </p>
+        <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+          <a href="#dashboard" class="inline-flex items-center justify-center rounded-2xl bg-black px-5 py-3 font-medium text-white shadow-md hover:shadow-lg">Canlı Dashboard (Demo)</a>
+          <a href="#pricing" class="inline-flex items-center justify-center rounded-2xl border px-5 py-3 font-medium hover:bg-gray-50">Paketleri Gör</a>
+        </div>
+        <div class="mt-6 grid grid-cols-2 gap-4 text-sm text-gray-700 md:grid-cols-3">
+          <div class="flex items-center gap-2"><i data-lucide="timer" class="w-4 h-4"></i> 48 saatte teslim*</div>
+          <div class="flex items-center gap-2"><i data-lucide="shield" class="w-4 h-4"></i> 17025 uyumlu süreç</div>
+          <div class="flex items-center gap-2"><i data-lucide="truck" class="w-4 h-4"></i> Mobil laboratuvar</div>
+        </div>
+      </div>
+
+      <!-- Hero Metrics Card -->
+      <div class="relative">
+        <div class="aspect-[4/3] w-full rounded-3xl border bg-white p-6 shadow-xl">
+          <div class="grid h-full grid-cols-2 gap-4">
+            <!-- 4 metric cards -->
+            <div class="flex flex-col justify-between rounded-2xl border p-4">
+              <div class="text-sm font-medium text-gray-500">Basınç</div>
+              <div class="text-3xl font-bold">±0.1%</div>
+              <div class="text-xs text-gray-500">Doğruluk sınıfı</div>
+            </div>
+            <div class="flex flex-col justify-between rounded-2xl border p-4">
+              <div class="text-sm font-medium text-gray-500">Sıcaklık</div>
+              <div class="text-3xl font-bold">±0.1%</div>
+              <div class="text-xs text-gray-500">Doğruluk sınıfı</div>
+            </div>
+            <div class="flex flex-col justify-between rounded-2xl border p-4">
+              <div class="text-sm font-medium text-gray-500">Tork</div>
+              <div class="text-3xl font-bold">±0.1%</div>
+              <div class="text-xs text-gray-500">Doğruluk sınıfı</div>
+            </div>
+            <div class="flex flex-col justify-between rounded-2xl border p-4">
+              <div class="text-sm font-medium text-gray-500">Elektriksel</div>
+              <div class="text-3xl font-bold">±0.05%</div>
+              <div class="text-xs text-gray-500">Doğruluk sınıfı</div>
+            </div>
+          </div>
+        </div>
+        <div class="pointer-events-none absolute -bottom-4 -right-4 rounded-2xl border bg-white px-4 py-2 text-xs shadow-md">
+          Sensor Health™ skor kartı örneği
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="mx-auto max-w-7xl px-4 py-16">
+    <h2 class="text-2xl font-bold md:text-3xl">Hizmetler</h2>
+    <p class="mt-2 max-w-2xl text-gray-600">Kalibrasyonun ötesinde; veri, hız ve dijital doğrulama.</p>
+    <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+      <div class="card p-6 shadow-sm">
+        <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gray-900 text-white"><i data-lucide="gauge" class="w-5 h-5"></i></div>
+        <h3 class="text-lg font-semibold">Sensör Kalibrasyonu</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-700">
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4"></i> Basınç (0–600 bar)</li>
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4"></i> Sıcaklık (–40…+650°C)</li>
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4"></i> Tork (10–1000 Nm)</li>
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4"></i> Volt/Amp/Ohm</li>
+        </ul>
+      </div>
+      <div class="card p-6 shadow-sm">
+        <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gray-900 text-white"><i data-lucide="bar-chart-3" class="w-5 h-5"></i></div>
+        <h3 class="text-lg font-semibold">Dijital Sertifika & QR</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-700">
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4"></i> QR ile doğrulama</li>
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4"></i> Bulut arşiv</li>
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4"></i> Denetim raporu</li>
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4"></i> API erişimi</li>
+        </ul>
+      </div>
+      <div class="card p-6 shadow-sm">
+        <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gray-900 text-white"><i data-lucide="cpu" class="w-5 h-5"></i></div>
+        <h3 class="text-lg font-semibold">Sensor Health™ Analitiği</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-700">
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4"></i> Drift takibi</li>
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4"></i> Öngörücü bakım</li>
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4"></i> Abonelik paneli</li>
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4"></i> Uyarı/hatırlatma</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sektöre Göre Sensör Aralıkları -->
+  <section id="sensors" class="mx-auto max-w-7xl px-4 py-16">
+    <h2 class="text-2xl font-bold md:text-3xl">Sektöre Göre Sensör Aralıkları</h2>
+    <p class="mt-2 max-w-3xl text-gray-600">Aralık ve doğruluklar proje ihtiyacına göre genişletilebilir. Talep edilirse özel menzil/prosedür tanımlarız.</p>
+    <div class="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div class="card p-6">
+        <h3 class="text-lg font-semibold">Otomotiv Test</h3>
+        <ul class="mt-3 list-disc space-y-1 pl-5 text-sm text-gray-700">
+          <li>Basınç: 0–1000 bar (yakıt/rail), vakum dahil çok nokta</li>
+          <li>Sıcaklık: –40…+1200°C (fırın/egzoz), ±0.2…1.0°C</li>
+          <li>Tork/Kuvvet: 10–3000 Nm, 0–100 kN</li>
+          <li>Elektriksel: mV–1000 V, mA–1000 A (DAQ lineerlik)</li>
+        </ul>
+      </div>
+      <div class="card p-6">
+        <h3 class="text-lg font-semibold">Savunma & Ar-Ge</h3>
+        <ul class="mt-3 list-disc space-y-1 pl-5 text-sm text-gray-700">
+          <li>Basınç: 0–1600 bar (özel), ±0.05% FS</li>
+          <li>Sıcaklık: –80…+650°C, IR doğrulama</li>
+          <li>Akış/Proses: Gaz/sıvı kütlesel, sızdırmazlık</li>
+          <li>Gaz/Çevresel: O2/CO/CO2/H2/VOC, %RH ±2</li>
+        </ul>
+      </div>
+      <div class="card p-6">
+        <h3 class="text-lg font-semibold">Enerji & Rafineri</h3>
+        <ul class="mt-3 list-disc space-y-1 pl-5 text-sm text-gray-700">
+          <li>Basınç: 0–2500 bar, yüksek sıcaklık kompanzasyon</li>
+          <li>Sıcaklık: –20…+1200°C (K/J/T),</li>
+          <li>Akış/Proses: DN15–DN300 debimetre, kütlesel/volümetrik</li>
+          <li>Elektriksel: Ex-proof saha cihazları, frekans/sinyal</li>
+        </ul>
+      </div>
+      <div class="card p-6">
+        <h3 class="text-lg font-semibold">Gıda & İlaç</h3>
+        <ul class="mt-3 list-disc space-y-1 pl-5 text-sm text-gray-700">
+          <li>Sıcaklık: –40…+180°C (soğuk zincir), datalogger doğrulama</li>
+          <li>Basınç: 0–25 bar (proses), diferansiyel basınç</li>
+          <li>Gaz/Çevresel: CO2, O2, nem (GMP kayıt)</li>
+          <li>Elektriksel: Temel doğrulamalar, kritik ekipman</li>
+        </ul>
+      </div>
+    </div>
+    <p class="mt-6 text-sm text-gray-500">Not: Değerler örnektir; kalibrasyon matrisi TÜRKAK kapsamına göre güncellenir.</p>
+  </section>
+
+  <!-- Dashboard (mock) -->
+  <section id="dashboard" class="border-y bg-gray-50">
+    <div class="mx-auto max-w-7xl px-4 py-14">
+      <div class="mb-6 flex items-center justify-between">
+        <h2 class="text-2xl font-bold md:text-3xl">Sensor Health™ Dashboard</h2>
+        <div class="text-sm text-gray-600">Durum: Demo görünümü</div>
+      </div>
+
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-4">
+        <div class="card p-5"><div class="text-sm text-gray-500">Aktif Sensör</div><div class="mt-1 text-3xl font-semibold">128</div></div>
+        <div class="card p-5"><div class="text-sm text-gray-500">Ortalama Sağlık</div><div class="mt-1 text-3xl font-semibold">86/100</div></div>
+        <div class="card p-5"><div class="text-sm text-gray-500">Drift &gt;1%</div><div class="mt-1 text-3xl font-semibold">7</div></div>
+        <div class="card p-5"><div class="text-sm text-gray-500">30g İçinde Due</div><div class="mt-1 text-3xl font-semibold">12</div></div>
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div class="card p-6">
+          <div class="text-sm text-gray-500">Genel Sağlık Skoru</div>
+          <div class="mt-4 flex items-center gap-4">
+            <div class="h-20 w-20 rounded-full" style="background: conic-gradient(rgb(17 24 39) 309deg, rgb(229 231 235) 309deg 360deg)"></div>
+            <div>
+              <div class="text-4xl font-semibold leading-none">86</div>
+              <div class="text-xs text-gray-500 mt-1">/100</div>
+            </div>
+          </div>
+        </div>
+        <div class="card p-6">
+          <div class="text-sm text-gray-500">Aylık Drift Ort.</div>
+          <div class="mt-3 text-3xl font-semibold">+0.42%</div>
+          <div class="mt-1 text-xs text-gray-500">Son 6 ay</div>
+        </div>
+        <div class="card p-6">
+          <div class="text-sm text-gray-500">Yaklaşan Kalibrasyonlar</div>
+          <div class="mt-3 text-3xl font-semibold">12 cihaz</div>
+          <div class="mt-1 text-xs text-gray-500">30 gün içinde</div>
+        </div>
+      </div>
+
+      <!-- Simple Table -->
+      <div class="mt-8 card p-6 overflow-x-auto">
+        <div class="mb-4 text-lg font-semibold">Sensör Listesi</div>
+        <table class="w-full text-left text-sm">
+          <thead class="text-gray-500">
+            <tr class="border-b">
+              <th class="px-3 py-2 font-medium">ID</th>
+              <th class="px-3 py-2 font-medium">Tür</th>
+              <th class="px-3 py-2 font-medium">Lokasyon</th>
+              <th class="px-3 py-2 font-medium">Son Kalibrasyon</th>
+              <th class="px-3 py-2 font-medium">Drift %</th>
+              <th class="px-3 py-2 font-medium">Health</th>
+              <th class="px-3 py-2 font-medium">Sonraki</th>
+              <th class="px-3 py-2 font-medium">Durum</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b">
+              <td class="px-3 py-2 font-medium">PRS-204</td><td class="px-3 py-2">Basınç</td><td class="px-3 py-2">İzmit</td><td class="px-3 py-2">2025-09-04</td><td class="px-3 py-2">0.3%</td><td class="px-3 py-2">92</td><td class="px-3 py-2">2026-03-05</td><td class="px-3 py-2"><span class="chip text-green-700 bg-green-50">OK</span></td>
+            </tr>
+            <tr class="border-b">
+              <td class="px-3 py-2 font-medium">TMP-442</td><td class="px-3 py-2">Sıcaklık</td><td class="px-3 py-2">Gebze</td><td class="px-3 py-2">2025-07-12</td><td class="px-3 py-2">1.3%</td><td class="px-3 py-2">74</td><td class="px-3 py-2">2025-12-15</td><td class="px-3 py-2"><span class="chip text-red-700 bg-red-50">Due</span></td>
+            </tr>
+            <tr>
+              <td class="px-3 py-2 font-medium">TRQ-118</td><td class="px-3 py-2">Tork</td><td class="px-3 py-2">Bursa</td><td class="px-3 py-2">2025-05-21</td><td class="px-3 py-2">0.8%</td><td class="px-3 py-2">81</td><td class="px-3 py-2">2025-11-27</td><td class="px-3 py-2"><span class="chip text-amber-700 bg-amber-50">Soon</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Partners -->
+  <section id="partners" class="mx-auto max-w-7xl px-4 py-16">
+    <h2 class="text-2xl font-bold md:text-3xl">Laboratuvar Partner Ağı</h2>
+    <p class="mt-2 max-w-2xl text-gray-600">Türkiye genelindeki kalibrasyon laboratuvarlarını tek platformda buluşturuyoruz. Başvurun, doğrulama sonrası paneliniz açılsın.</p>
+
+    <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+      <div class="card p-6 shadow-sm">
+        <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gray-900 text-white"><i data-lucide="building-2" class="w-5 h-5"></i></div>
+        <h3 class="text-lg font-semibold">Neden Katılın?</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-700">
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4"></i> Bölgenizdeki kurumsal talebe erişim</li>
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4"></i> QR'lı dijital sertifika altyapısı</li>
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4"></i> API ile kolay entegrasyon</li>
+        </ul>
+      </div>
+
+      <div class="card p-6">
+        <div class="mb-3 text-lg font-semibold">Onaylı Hizmet Sağlayıcılar</div>
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-center justify-between rounded-xl border px-3 py-2">
+            <div><div class="font-medium">Marmara Kalibrasyon</div><div class="text-gray-500">Kocaeli · Basınç · Sıcaklık</div></div><div class="text-gray-600">SLA: 48s</div>
+          </li>
+          <li class="flex items-center justify-between rounded-xl border px-3 py-2">
+            <div><div class="font-medium">Bursa Metrotech</div><div class="text-gray-500">Bursa · Tork · Elektriksel</div></div><div class="text-gray-600">SLA: 72s</div>
+          </li>
+          <li class="flex items-center justify-between rounded-xl border px-3 py-2">
+            <div><div class="font-medium">Istanbul Q-Lab</div><div class="text-gray-500">İstanbul · Elektriksel · Basınç</div></div><div class="text-gray-600">SLA: 24s</div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Partner Apply Form (Formspree) -->
+      <div class="card p-6">
+        <div class="mb-3 text-lg font-semibold">Partner Başvurusu</div>
+        <form action="https://formspree.io/f/REPLACE_WITH_YOUR_ID" method="POST" class="space-y-3">
+          <label class="block text-sm">Laboratuvar Adı
+            <input name="lab" required class="mt-1 w-full rounded-xl border px-3 py-2 outline-none focus:ring">
+          </label>
+          <label class="block text-sm">Şehir
+            <input name="city" required class="mt-1 w-full rounded-xl border px-3 py-2 outline-none focus:ring">
+          </label>
+          <label class="block text-sm">E-posta
+            <input type="email" name="email" required class="mt-1 w-full rounded-xl border px-3 py-2 outline-none focus:ring">
+          </label>
+          <fieldset>
+            <legend class="mb-1 text-sm text-gray-600">Alanlar</legend>
+            <div class="flex flex-wrap gap-2 text-sm">
+              <label class="inline-flex items-center gap-2 rounded-full border px-3 py-1"><input type="checkbox" name="areas" value="Basınç"> Basınç</label>
+              <label class="inline-flex items-center gap-2 rounded-full border px-3 py-1"><input type="checkbox" name="areas" value="Sıcaklık"> Sıcaklık</label>
+              <label class="inline-flex items-center gap-2 rounded-full border px-3 py-1"><input type="checkbox" name="areas" value="Tork"> Tork</label>
+              <label class="inline-flex items-center gap-2 rounded-full border px-3 py-1"><input type="checkbox" name="areas" value="Elektriksel"> Elektriksel</label>
+              <label class="inline-flex items-center gap-2 rounded-full border px-3 py-1"><input type="checkbox" name="areas" value="Akış/Proses"> Akış/Proses</label>
+              <label class="inline-flex items-center gap-2 rounded-full border px-3 py-1"><input type="checkbox" name="areas" value="Gaz/Çevresel"> Gaz/Çevresel</label>
+            </div>
+          </fieldset>
+          <label class="block text-sm">Mesaj
+            <textarea name="message" rows="4" class="mt-1 w-full rounded-xl border px-3 py-2 outline-none focus:ring" placeholder="Kapasite, ekipman, kapsam açıklaması"></textarea>
+          </label>
+          <button class="inline-flex items-center justify-center rounded-2xl bg-black px-4 py-2 font-medium text-white hover:shadow">Başvuruyu Gönder</button>
+          <p class="text-xs text-gray-500">Not: Formspree kullanacaksanız URL’deki ID’yi değiştirin. Formspree yoksa aşağıdaki e-posta butonunu kullanabilirsiniz.</p>
+        </form>
+        <!-- Mailto fallback -->
+        <a href="mailto:partners@calisense.com?subject=Partner%20Ba%C5%9Fvurusu&body=Laboratuvar%20Ad%C4%B1:%0A%20%C5%9Eehir:%0A%20Alanlar:%0A%20Mesaj:%0A" class="mt-3 inline-flex items-center justify-center rounded-2xl border px-4 py-2 text-sm hover:bg-gray-50">E-posta ile Başvur</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="mx-auto max-w-7xl px-4 py-16">
+    <h2 class="text-2xl font-bold md:text-3xl">Paketler</h2>
+    <p class="mt-2 max-w-2xl text-gray-600">Aylık üyelikle bütçe öngörülebilirliği ve hızlı servis.</p>
+    <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+      <div class="relative card p-6 shadow-sm">
+        <div class="absolute -top-3 right-4 rounded-full border bg-white px-3 py-1 text-xs font-medium">Yeni Başlayanlar</div>
+        <h3 class="text-lg font-semibold">Base</h3>
+        <div class="mt-1 text-3xl font-bold">₺4.990/ay</div>
+        <ul class="mt-4 space-y-2 text-sm text-gray-700">
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4"></i> 10 cihaza kadar</li>
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4"></i> Standart kalibrasyon</li>
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4"></i> Dijital sertifika arşivi</li>
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4"></i> 48 saatte teslim*</li>
+        </ul>
+        <a href="#contact" class="mt-6 inline-flex w-full items-center justify-center rounded-2xl bg-black px-4 py-2 font-medium text-white hover:shadow">Seç ve İletişime Geç</a>
+      </div>
+      <div class="relative card p-6 shadow-sm">
+        <div class="absolute -top-3 right-4 rounded-full border bg-white px-3 py-1 text-xs font-medium">En Popüler</div>
+        <h3 class="text-lg font-semibold">Pro</h3>
+        <div class="mt-1 text-3xl font-bold">₺12.900/ay</div>
+        <ul class="mt-4 space-y-2 text-sm text-gray-700">
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4"></i> 30 cihaza kadar</li>
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4"></i> Öncelikli mobil servis</li>
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4"></i> QR doğrulama + API</li>
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4"></i> Sensor Health™ panel</li>
+        </ul>
+        <a href="#contact" class="mt-6 inline-flex w-full items-center justify-center rounded-2xl bg-black px-4 py-2 font-medium text-white hover:shadow">Seç ve İletişime Geç</a>
+      </div>
+      <div class="relative card p-6 shadow-sm">
+        <div class="absolute -top-3 right-4 rounded-full border bg-white px-3 py-1 text-xs font-medium">Ölçekli Operasyon</div>
+        <h3 class="text-lg font-semibold">Enterprise</h3>
+        <div class="mt-1 text-3xl font-bold">Teklif</div>
+        <ul class="mt-4 space-y-2 text-sm text-gray-700">
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4"></i> Sınırsız cihaz/tesiste fiyatlama</li>
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4"></i> Öngörücü bakım analitiği</li>
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4"></i> Denetim/uyumluluk raporları</li>
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4"></i> SLA ile garanti</li>
+        </ul>
+        <a href="#contact" class="mt-6 inline-flex w-full items-center justify-center rounded-2xl bg-black px-4 py-2 font-medium text-white hover:shadow">Seç ve İletişime Geç</a>
+      </div>
+    </div>
+    <p class="mt-4 text-xs text-gray-500">*Teslim süresi cihaz türü ve yoğunluğa göre değişebilir.</p>
+  </section>
+
+  <!-- CTA + Contact -->
+  <section id="contact" class="border-y bg-gradient-to-br from-gray-50 to-white">
+    <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-6 px-4 py-12 md:grid-cols-2">
+      <div>
+        <h3 class="text-xl font-semibold md:text-2xl">Kalibrasyonda yeni bir standart deneyimleyin</h3>
+        <p class="mt-2 text-gray-600">Mobil ekip, dijital sertifika, Sensor Health™ skoru. Kocaeli çıkışlı hızlı servis.</p>
+        <div class="mt-4 flex flex-wrap gap-3 text-sm text-gray-700">
+          <div class="chip"><i data-lucide="wrench" class="w-4 h-4"></i> Yerinde servis</div>
+          <div class="chip"><i data-lucide="shield" class="w-4 h-4"></i> Uyumlu süreç</div>
+          <div class="chip"><i data-lucide="bar-chart-3" class="w-4 h-4"></i> Health skoru</div>
+        </div>
+      </div>
+      <div class="card bg-white p-6 shadow-sm">
+        <!-- Formspree form -->
+        <form action="https://formspree.io/f/REPLACE_WITH_YOUR_ID" method="POST" class="grid grid-cols-1 gap-3">
+          <label class="text-sm">E-posta
+            <input type="email" name="email" required placeholder="ornek@firma.com" class="mt-1 w-full rounded-xl border px-3 py-2 outline-none focus:ring">
+          </label>
+          <label class="text-sm">İhtiyacınızı Anlatın
+            <textarea name="message" rows="4" placeholder="Cihaz tipi, adet, lokasyon..." class="mt-1 w-full rounded-xl border px-3 py-2 outline-none focus:ring"></textarea>
+          </label>
+          <button type="submit" class="inline-flex items-center justify-center rounded-2xl bg-black px-4 py-2 font-medium text-white hover:shadow">Teklif Talep Et</button>
+          <p class="mt-2 text-xs text-gray-500">Formspree ID’nizi ekleyene kadar aşağıdaki e-posta butonunu kullanabilirsiniz.</p>
+        </form>
+        <a class="mt-2 inline-flex items-center gap-2 text-sm underline"
+           href="mailto:hello@calisense.com?subject=Teklif%20Talebi&body=Merhaba%20Calisense,%0A%0A%C4%B0htiyac%C4%B1m:%20[Bas%C4%B1n%C3%A7/S%C4%B1cakl%C4%B1k/Tork/Elektriksel]%20kalibrasyonu%0AFirma:%0ALokasyon:%0ACihaz%20say%C4%B1s%C4%B1:%0A%C4%B0leti%C5%9Fim:%0A%0AMesaj%C4%B1m:%0A">
+          <i data-lucide="mail" class="w-4 h-4"></i> E-posta ile Talep Gönder
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="mx-auto max-w-7xl px-4 py-16">
+    <h2 class="text-2xl font-bold md:text-3xl">Sık Sorulan Sorular</h2>
+    <div class="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+      <div class="card p-5">
+        <div class="font-semibold">Akreditasyon durumunuz nedir?</div>
+        <div class="mt-1 text-gray-600">ISO/IEC 17025’e uyumlu süreçle çalışıyoruz; akreditasyon başvuru takvimimiz yayında. Kurumsal müşterilere süreç şeffaflığı sağlanır.</div>
+      </div>
+      <div class="card p-5">
+        <div class="font-semibold">Hangi bölgelerde hizmet veriyorsunuz?</div>
+        <div class="mt-1 text-gray-600">Kocaeli merkezli olup İstanbul ve Bursa’ya aynı gün mobil servis sunuyoruz.</div>
+      </div>
+      <div class="card p-5">
+        <div class="font-semibold">Sertifikalar nasıl doğrulanır?</div>
+        <div class="mt-1 text-gray-600">Her sertifikada QR bulunur. Tarattığınızda geçerlilik ve detaylar bulutta görüntülenir.</div>
+      </div>
+      <div class="card p-5">
+        <div class="font-semibold">Fiyatlandırma nasıl?</div>
+        <div class="mt-1 text-gray-600">Paketler aylık üyelik mantığındadır; tek seferlik kalibrasyon için de teklif veriyoruz.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t">
+    <div class="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-4 py-10 md:grid-cols-3">
+      <div>
+        <div class="flex items-center gap-2 font-semibold"><i data-lucide="gauge" class="w-5 h-5"></i> Calisense</div>
+        <p class="mt-2 text-sm text-gray-600">Mobil & dijital sensör kalibrasyonu. Kocaeli · İstanbul · Bursa.</p>
+        <div class="mt-3 flex flex-col gap-2 text-sm text-gray-700">
+          <div class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> +90 532 000 00 00</div>
+          <div class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i> hello@calisense.com</div>
+          <div class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> Kartepe, Kocaeli</div>
+        </div>
+      </div>
+      <div>
+        <div class="font-semibold">Bağlantılar</div>
+        <ul class="mt-2 space-y-2 text-sm text-gray-700">
+          <li><a href="#services" class="hover:text-black">Hizmetler</a></li>
+          <li><a href="#pricing" class="hover:text-black">Paketler</a></li>
+          <li><a href="#partners" class="hover:text-black">Partnerler</a></li>
+          <li><a href="#dashboard" class="hover:text-black">Dashboard</a></li>
+        </ul>
+      </div>
+      <div id="contact-short">
+        <div class="font-semibold">Hızlı İletişim</div>
+        <p class="mt-2 text-sm text-gray-600">İhtiyacınızı paylaşın, aynı gün dönüş yapalım.</p>
+        <a href="#contact" class="mt-3 inline-flex items-center justify-center rounded-2xl bg-black px-4 py-2 text-sm font-medium text-white">Teklif Al</a>
+      </div>
+    </div>
+    <div class="border-t py-4 text-center text-xs text-gray-500">© <span id="y"></span> Calisense. Tüm hakları saklıdır.</div>
+  </footer>
+
+  <script>
+    // Lucide ikonlarını başlat
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) window.lucide.createIcons();
+      document.getElementById('y').textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>
